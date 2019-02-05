@@ -6,7 +6,7 @@ import javax.servlet.http.*;
 @WebServlet(name = "HelloWorldServlet", urlPatterns = "/hello")
 
 public class HelloWorldServlet extends HttpServlet {
-int pageVisits = 0;
+private int pageVisits = 0;
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         pageVisits += 1;
