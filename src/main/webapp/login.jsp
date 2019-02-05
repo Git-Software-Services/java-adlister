@@ -10,14 +10,14 @@
 
 <%--<%--%>
 <%--if(request.getMethod().equalsIgnoreCase("post")) {--%>
-    <%--String userName = request.getParameter("userName");--%>
-    <%--String password = request.getParameter("password");--%>
+<%--String userName = request.getParameter("userName");--%>
+<%--String password = request.getParameter("password");--%>
 
-    <%--if (userName.equals("admin") && password.equals("password")) {--%>
-        <%--response.sendRedirect("/profile.jsp");--%>
-    <%--} else {--%>
-        <%--response.sendRedirect("/login.jsp");--%>
-    <%--}--%>
+<%--if (userName.equals("admin") && password.equals("password")) {--%>
+<%--response.sendRedirect("/profile.jsp");--%>
+<%--} else {--%>
+<%--response.sendRedirect("/login.jsp");--%>
+<%--}--%>
 <%--}--%>
 <%--%>--%>
 
@@ -29,20 +29,27 @@
     <%@ include file="partials/navbar.jsp" %>
     <%@ include file="partials/head.jsp" %>
 
-        <h1>Login Page</h1>
+    <h1>Login Page</h1>
+    <div class="container mx-5">
+        <div class="row justify-content-center">
+        <div class="col-5">
         <form action="/login" method="POST">
-        <div class="form-group mx-3 mb-2">
-            <label for="username">Username</label>
-            <input type="text" class="form-control" id="userName" name="userName" aria-describedby="emailHelp" placeholder="Enter username">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <div class="form-group mx-3 mb-2">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="userName" name="userName" aria-describedby="emailHelp"
+                       placeholder="Enter username">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.
+                </small>
+            </div>
+            <div class="form-group mx-3 mb-2">
+                <label for="Password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+            </div>
+            <br><br>
+            <button type="Login" class="btn btn-primary mx-3">Submit</button>
+        </form>
         </div>
-        <div class="form-group mx-3 mb-2">
-            <label for="Password">Password</label>
-            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
         </div>
-        <br><br>
-        <button type="submit" class="btn btn-primary mx-3">Submit</button>
-    </form>
-
+    </div>
 </body>
 </html>
