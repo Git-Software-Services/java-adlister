@@ -1,0 +1,19 @@
+.jumbotron {
+    padding: 0!important;
+    color: #82187c;
+    background-color:white;
+    margin: 0;
+}
+
+.text-left {
+    text-align: left!important;
+}
+
+.carousel-caption {
+    padding-bottom: 0px!important;
+    margin-left: -135px;
+}
+
+.navbar-brand {
+    color: white;
+}
