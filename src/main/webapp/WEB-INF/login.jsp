@@ -26,8 +26,8 @@
     <title>Title</title>
 </head>
 <body>
-    <%@ include file="partials/navbar.jsp" %>
-    <%@ include file="partials/head.jsp" %>
+    <%@ include file="/WEB-INF/partials/navbar.jsp" %>
+    <%@ include file="/WEB-INF/partials/head.jsp" %>
 
     <h1>Login Page</h1>
     <div class="container mx-5">
