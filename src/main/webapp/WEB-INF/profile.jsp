@@ -11,6 +11,6 @@
     <div class="container">
         <h1>Viewing your profile.</h1>
     </div>
-
+    <jsp:include page="partials/footer.jsp" />
 </body>
 </html>
