@@ -2,15 +2,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <jsp:include page="/partials/head.jsp">
+    <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Viewing All The Ads" />
     </jsp:include>
 </head>
 <body>
-<jsp:include page="/partials/navbar.jsp" />
+<jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
-    <h1>Here Are all the ads!</h1>
+    <h1 class="pt-4">Here are all the <span class="lobster-font">ADS:</span></h1>
 
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
@@ -19,6 +19,6 @@
         </div>
     </c:forEach>
 </div>
-
+    <jsp:include page="/WEB-INF/partials/footer.jsp" />
 </body>
 </html>
