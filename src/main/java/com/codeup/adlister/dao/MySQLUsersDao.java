@@ -23,7 +23,7 @@ public class MySQLUsersDao implements Users {
 
     @Override
     public User findByUsername(String username) throws SQLException {
-        String sql = "SELECT * FROM users WHERE username LIKE ?";
+        String sql = "SELECT * FROM users WHERE username = ?";
         String searchTermWithWildcards = "%" + username + "%";
 
         PreparedStatement stmt = null;
@@ -35,7 +35,7 @@ public class MySQLUsersDao implements Users {
         }
 
         ResultSet rs = stmt.executeQuery();
-        while(rs.next()) {
+        while (rs.next()) {
             return extractUsers(rs);
         }
         return null;
@@ -43,13 +43,13 @@ public class MySQLUsersDao implements Users {
 
 
     private User extractUsers(ResultSet rs) throws SQLException {
-            return new User(
-                    rs.getLong("id"),
-                    rs.getString("username"),
-                    rs.getString("email"),
-                    rs.getString("password")
-            );
-        }
+        return new User(
+                rs.getLong("id"),
+                rs.getString("username"),
+                rs.getString("email"),
+                rs.getString("password")
+        );
+    }
 
 
     @Override

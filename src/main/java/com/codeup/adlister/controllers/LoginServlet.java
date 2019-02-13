@@ -27,7 +27,6 @@ public class LoginServlet extends HttpServlet {
     // TODO: store the logged in user object in the session, instead of just the username
 
     User verifiedUser;
-    boolean validAttempt = false;
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
@@ -39,11 +38,9 @@ public class LoginServlet extends HttpServlet {
             }
             if (password.equals(DaoFactory.getUsersDao().findByUsername(username).getPassword())) {
                 verifiedUser = DaoFactory.getUsersDao().findByUsername(username);
-                validAttempt = true;
                 request.getSession().setAttribute("user", verifiedUser);
                 response.sendRedirect("/profile");
             } else {
-                validAttempt = false;
                 response.sendRedirect("/login");
             }
 
